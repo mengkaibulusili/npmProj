@@ -20,10 +20,18 @@ from django.urls import path, re_path
 from django.views.static import serve
 
 from shopServer import settings
-from goods import views as views1
+from goods import views as goods
+from vips import views as vips
+from projs import views as projs
+from staffs import views as staffs
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^dturl/(?P<fucname>[a-zA-Z0-9]+)/$', views1.usefucbyname),
     url(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
+
+    re_path(r'^api/goods/(?P<fucname>[a-zA-Z0-9]+)/$', goods.usefucbyname),
+    re_path(r'^api/vips/(?P<fucname>[a-zA-Z0-9]+)/$', vips.usefucbyname),
+    re_path(r'^api/projs/(?P<fucname>[a-zA-Z0-9]+)/$', projs.usefucbyname),
+    re_path(r'^api/staffs/(?P<fucname>[a-zA-Z0-9]+)/$', staffs.usefucbyname),
+
 ]
