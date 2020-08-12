@@ -33,9 +33,11 @@ class VipsProj(models.Model):
   usetime = models.CharField("usetime",default="-1", max_length=charlen,blank=True)
 
   # 必须传入的字段
-  vipprojid = models.CharField("vipprojid", max_length=charlen)
-  vipprojname = models.CharField("vipprojname", max_length=charlen)
-  vipprojprice = models.CharField("vipprojprice", max_length=charlen)
+  vipname = models.CharField("vipname", max_length=charlen)
+  viptelephone = models.CharField("viptelephone", unique=True, max_length=charlen)
+  projid = models.CharField("projid", max_length=charlen)
+  projname = models.CharField("projname", max_length=charlen)
+  projprice = models.CharField("projprice", max_length=charlen)
   staffid = models.CharField("staffid", max_length=charlen)
   staff = models.CharField("staff", max_length=charlen)
 
