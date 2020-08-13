@@ -13,6 +13,7 @@ class StaffsInfo(models.Model):
   totalvip = models.CharField("totalvip", default="0", max_length=charlen, blank=True)
   state = models.CharField("state", default="在职", max_length=charlen, blank=True)
   quittime = models.CharField("quittime", default="0", max_length=charlen, blank=True)
+  salary = models.CharField("salary", default="0", max_length=charlen, blank=True)
 
   staffname = models.CharField("staffname", max_length=charlen)
   stafftelephone = models.CharField("stafftelephone", unique=True, max_length=charlen)
