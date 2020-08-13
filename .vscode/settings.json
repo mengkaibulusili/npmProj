@@ -1,5 +1,14 @@
 {
   "python.pythonPath": "C:\\python36\\python.exe",
   "python.linting.flake8Enabled": true,
-  "python.linting.enabled": true
+  "python.linting.enabled": true,
+  "sqltools.connections": [
+    {
+      "database": "${workspaceFolder:npmProj}/shopServer/db.sqlite3",
+      "driver": "SQLite",
+      "name": "db",
+      "previewLimit": 50
+    }
+  ],
+  "sqltools.useNodeRuntime": true
 }
