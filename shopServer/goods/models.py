@@ -12,12 +12,11 @@ class GoodsInfo(models.Model):
 
   # 可修改
   state = models.CharField("state", default="在售", blank=True, max_length=charlen)
-  brandid = models.CharField("brandid", default="未填写", blank=True, max_length=charlen)
   brandname = models.CharField("brandname", default="未填写", blank=True, max_length=charlen)
   goodintroduce = models.CharField("goodintroduce", default="", blank=True, max_length=charlen)
 
   # 必填
-  goodname = models.CharField("goodname", max_length=charlen)
+  goodname = models.CharField("goodname", unique=True, max_length=charlen)
   goodprice = models.CharField("goodprice", max_length=charlen)
 
 
@@ -33,4 +32,3 @@ class GoodsBand(models.Model):
 
   # 必填写
   brandname = models.CharField("brandname", unique=True, max_length=charlen)
-

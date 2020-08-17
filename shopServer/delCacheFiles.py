@@ -30,7 +30,7 @@ def cleanCache():
   dirRoot = os.path.dirname(__file__)
 
   dirName = "__pycache__"
-  fileList = ["db.sqlite3", "_initial.py"]
+  fileList = ["db.sqlite3", "_initial.py", "_auto_"]
   needRmDirs = []
   needRmFiles = []
   for root, dirs, files in os.walk(dirRoot):
